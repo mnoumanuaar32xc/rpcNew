@@ -11,7 +11,7 @@ const client = new Client({
       port: 8332,
   });
 //   const client = new Client({ headers: true });
-  client.getInfo().then(([body, headers]) => console.log(body, headers));
+ console.log( client.getInfo())
 
   app.listen(3000,()=> console.log("Server is running at http://localhost:3000"));
  
