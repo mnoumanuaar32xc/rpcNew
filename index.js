@@ -16,10 +16,18 @@ const client = new Client({
 //     // client.getInfo();
 //     res.send(client.getInfo());
 //     })
+app.post('/getinfo',function(req,res){
+client.getInfo().then((response)=>
+{
+res.send(response);
+}).catch(err)
+{
+  res.send(err);
+};
+});
+// const getbalance=(req,res)=>{
+// console.log('getbalance');
+//    console.log( client.getbalance());
 
-const getbalance=(req,res)=>{
-console.log('getbalance');
-   console.log( client.getbalance());
-
- }
+//  }
  app.listen(3000,()=> console.log("Server is running at http://localhost:3000"));
