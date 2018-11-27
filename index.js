@@ -23,4 +23,16 @@ app.post('/gettransaction',function(req,res){
   client.getTransactionByHash('b4dd08f32be15d96b7166fd77afd18aece7480f72af6c9c7f9c5cbeb01e686fe');
 });
 
+app.post('/getnewaddress',function(req,res){
+  const batch = [
+    { method: 'getnewaddress', parameters: [] }
+  ]
+   
+  client.command(batch).then((responses) => res.send(responses));
+   
+
+
+});
+
+
  app.listen(3000,()=> console.log("Server is running at http://localhost:3000"));
