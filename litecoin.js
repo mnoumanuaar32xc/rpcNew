@@ -1,4 +1,4 @@
-var bitcore = require('bitcore');
+//var bitcore = require('bitcore');
 var RpcClient = require('bitcoind-rpc');
 const express = require ('express')
 const app = express()
