@@ -18,7 +18,7 @@ const client = new Client({
 //     })
 app.post('/getinfo',function(req,res){
   const batch = [
-    { method: 'getInfo', parameters: [] }
+    { method: 'getblockchaininfo', parameters: [] }
   ]
    client.command(batch).then((responses) => res.send(responses));
  
