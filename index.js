@@ -20,7 +20,7 @@ app.post('/getinfo',function(req,res){
   const batch = [
     { method: 'getInfo', parameters: [] }
   ]
-   client().command(batch).then((responses) => res.send(responses));
+   client.command(batch).then((responses) => res.send(responses));
  
 
 });
