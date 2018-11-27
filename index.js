@@ -17,10 +17,9 @@ const client = new Client({
 //     res.send(client.getInfo());
 //     })
 
-  app.listen(3000,()=> console.log("Server is running at http://localhost:3000"));
- const getbalance=(req,res)=>{
+const getbalance=(req,res)=>{
 console.log('getbalance');
    console.log( client.getbalance());
 
-
  }
+ app.listen(3000,()=> console.log("Server is running at http://localhost:3000"));
