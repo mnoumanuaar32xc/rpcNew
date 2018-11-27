@@ -22,7 +22,7 @@ client.getInfo().then((response)=>
 res.send(response);
 }).catch(err)
 {
-  res.send(err);
+  res.send(err.message);
 };
 });
 // const getbalance=(req,res)=>{
