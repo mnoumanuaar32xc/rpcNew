@@ -13,7 +13,20 @@ const client = new Client({
 
 app.post('/getinfo',function(req,res){
   
- let data=client.getInfo();
+  
+ client.getInfo((error, response) =>{
+
+if (error)
+{
+  res.send(error);
+}
+else
+{
+res.send(response);
+}
+
+ });
+
 res.send({data});
 });
 
