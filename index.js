@@ -11,7 +11,16 @@ const client = new Client({
       port: 8332,
   });
 //   const client = new Client({ headers: true });
- console.log( client.getInfo())
+//  console.log( client.getInfo())
+// app.post('/',function(req,res){
+//     // client.getInfo();
+//     res.send(client.getInfo());
+//     })
 
   app.listen(3000,()=> console.log("Server is running at http://localhost:3000"));
- 
+ const getbalance=(req,res)=>{
+console.log('getbalance');
+   console.log( client.getbalance());
+
+
+ }
