@@ -17,13 +17,7 @@ const client = new Client({
 //     res.send(client.getInfo());
 //     })
 app.post('/getinfo',function(req,res){
-client.getInfo().then((response)=>
-{
-res.send(response);
-}).catch(err)
-{
-  res.send(err.message);
-};
+res.send({data:client.getInfo()});
 });
 // const getbalance=(req,res)=>{
 // console.log('getbalance');
