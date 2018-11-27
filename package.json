@@ -18,6 +18,7 @@
   "homepage": "https://github.com/mnoumanuaar32xc/rpcCalls#readme",
   "dependencies": {
     "bitcoin-core": "^2.0.0",
+    "bitcoind-rpc": "^0.7.2",
     "express": "^4.16.4"
   }
 }

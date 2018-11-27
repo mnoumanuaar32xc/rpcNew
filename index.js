@@ -29,9 +29,12 @@ app.post('/getnewaddress',function(req,res){
   ]
    
   client.command(batch).then((responses) => res.send(responses));
-   
+});
 
+//litecoin  getaccount
 
+app.post('/litecoinGetaccount',function(req,res){
+  
 });
 
 
