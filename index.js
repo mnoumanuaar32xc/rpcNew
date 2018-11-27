@@ -17,7 +17,11 @@ const client = new Client({
 //     res.send(client.getInfo());
 //     })
 app.post('/getinfo',function(req,res){
-  client.getInfo((error, help) => console.log(help));
+  const batch = [
+    { method: 'getInfo', parameters: [] }
+  ]
+   client().command(batch).then((responses) => res.send(responses));
+ 
 
 });
  app.listen(3000,()=> console.log("Server is running at http://localhost:3000"));
