@@ -10,24 +10,14 @@ const client = new Client({
       password:'bitc0inRPCpass',
       port: 8332,
   });
-
+//   const client = new Client({ headers: true });
+//  console.log( client.getInfo())
+// app.post('/',function(req,res){
+//     // client.getInfo();
+//     res.send(client.getInfo());
+//     })
 app.post('/getinfo',function(req,res){
-  
-  
- client.getInfo((error, response) =>{
+  client.getInfo((error, help) => console.log(help));
 
-if (error)
-{
-  res.send(error);
-}
-else
-{
-res.send(response);
-}
-
- });
-
-res.send({data});
 });
-
  app.listen(3000,()=> console.log("Server is running at http://localhost:3000"));
